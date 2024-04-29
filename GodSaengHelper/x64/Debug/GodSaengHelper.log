@@ -1,0 +1,27 @@
+﻿  a_main.c
+  diary.c
+C:\Users\User\Desktop\Project\GodSaengHelper\a_main.c(15,17): warning C4013: 'startDayOfMonth'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\a_main.c(23,3): warning C4013: 'showCalender'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\a_main.c(37,4): warning C4013: 'choiceDay'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\diary.c(107,10): warning C4101: 'eFileName' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\diary.c(181,10): warning C4101: 'eFileName' :참조되지 않은 지역 변수입니다.
+  lastDayOfMonth.c
+C:\Users\User\Desktop\Project\GodSaengHelper\lastDayOfMonth.c(3,6): warning C4101: 'lastDay' :참조되지 않은 지역 변수입니다.
+  showCalender.c
+C:\Users\User\Desktop\Project\GodSaengHelper\showCalender.c(32,20): warning C4013: 'lastDayOfMonth'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  startDayOfMonth.c
+  choiceDay.c
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(12,5): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(34,22): warning C4098: 'todoListWrite': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(51,22): warning C4098: 'todoListWrite': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(75,22): warning C4098: 'todoSimpleRead': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(92,13): warning C4098: 'todoSimpleRead': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(217,37): warning C4047: '함수': 'todoList *'의 간접 참조 수준이 'todoList **'과(와) 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(217,37): warning C4024: 'todoListWrite': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(220,38): warning C4047: '함수': 'todoList *'의 간접 참조 수준이 'todoList **'과(와) 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(220,38): warning C4024: 'deleteTodoList': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(223,40): warning C4047: '함수': 'todoList *'의 간접 참조 수준이 'todoList **'과(와) 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(223,40): warning C4024: 'completeTodoList': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\User\Desktop\Project\GodSaengHelper\choiceDay.c(230,91): warning C4029: 선언된 정식 매개 변수 목록이 정의와 다릅니다.
+  코드를 생성하고 있습니다...
+  GodSaengHelper.vcxproj -> C:\Users\User\Desktop\Project\x64\Debug\GodSaengHelper.exe
