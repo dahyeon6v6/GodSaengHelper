@@ -9,7 +9,7 @@ int lastDayOfMonth(int year, int month) {
 		return  30;
 	case 2:
 		leapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-		return  28 + leapYear; //해당 연도의 2월이 윤달인지 아닌지 확인후 맞으면 28+1로 return
+		return  28 + leapYear; //해당 연도 윤년 확인 -> 맞으면 28+1로 return
 	default:
 		return 0;
 	}

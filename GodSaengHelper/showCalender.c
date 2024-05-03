@@ -8,13 +8,18 @@ bool toDo(int year, int month, int day) {
     snprintf(tFileName, sizeof(tFileName), TODOFILE_FORMAT, year, month, day);
     FILE* file = fopen(tFileName, "r");
     if (file != NULL) {
+        char c = fgetc(file);
         fclose(file);
-        return true;
+        if (c == '0' || c == '1')
+            return true;
+        else
+            return false;
     }
     else {
         return false;
     }
 }
+
 bool writeDiary(int year, int month, int day) {
     char dFileName[50];
     snprintf(dFileName, sizeof(dFileName), DIARYFILE_FORMAT, year, month, day);

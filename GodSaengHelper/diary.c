@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt"
+#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,74 +13,74 @@ void diaryWrite(int year, int month, int day) {
 
     struct diary diary;
     strcpy(diary.title, "");
-    strcpy(diary.content, "");
     strcpy(diary.emotion, "");
+    strcpy(diary.content, "");
+    
+    printf("\n\t\t << %4d-%02d-%02d 일기 >>\n\n", year, month, day);
 
-    printf("%4d-%02d-%02d\n", year, month, day);
-
-    printf("제목을 입력하세요.\n");
+    printf("  ▶ 제목 : ");
     fgets(diary.title, sizeof(diary.title), stdin);
+    printf("\n");
 
-    printf("내용을 입력하세요.\n");
-    fgets(diary.content, sizeof(diary.content), stdin);
-
-
-    printf("오늘의 감정을 입력하세요.\n");
+    printf("  ▶ 오늘의 감정 : ");
     fgets(diary.emotion, sizeof(diary.emotion), stdin);
+    printf("\n");
 
-    system("cls");
+    printf("  ▶ 내용 : ");
+    fgets(diary.content, sizeof(diary.content), stdin);
+    printf("\n");
 
-    printf("▣▣▣ %d년 %d월 %d일 Diary ▣▣▣\n", year, month, day);
-    printf("%s\n", diary.title);
-    printf("%s\n", diary.content);
-    printf("%s\n", diary.emotion);
-    
     diaryFileSave(&diary, year, month, day);
-    
 }
 
 // 다이어리 저장
 void diaryFileSave(struct diary* diary, int year, int month, int day) {
     char answer;
+    int valid = 0;
 
-    printf("\n작성된 다이어리를 저장하시겠습니까? 취소하시겠습니까? (S: 저장, C: 취소): ");
-    scanf(" %c", &answer);
+    printf("\n   ─────────────────────────────────────────────────────────\n\n");
+    printf("   일기 작성이 완료되었습니다. 수행할 기능을 선택하세요.\n");
 
-    if (answer == 's' || answer == 'S') {
-        char dFileName[100];
+    while (!valid) {
+        printf("\n   S - 다이어리 저장\n   C - 취소\t\t\t\t입력 : ");
+        scanf(" %c", &answer);
 
-        sprintf(dFileName, DIARYFILE_FORMAT, year, month, day);
+        if (answer == 's' || answer == 'S') {
+            valid = 1;
+            char dFileName[100];
 
-        FILE* fp = fopen(dFileName, "w");
+            sprintf(dFileName, DIARYFILE_FORMAT, year, month, day);
 
-        if (fp == NULL) {
-            printf("파일을 열 수 없습니다.\n");
-            perror("fopen");
-            return;
+            FILE* fp = fopen(dFileName, "w");
+
+            if (fp == NULL) {
+                printf("   파일을 열 수 없습니다.\n");
+                perror("fopen");
+                return;
+            }
+
+            fprintf(fp, "%s\n", diary->title);
+            fprintf(fp, "%s\n", diary->emotion);
+            fprintf(fp, "%s\n", diary->content);
+
+            fclose(fp);
+
+            printf("\n\n   다이어리가 저장되었습니다. 3초 뒤 이전 화면으로 돌아갑니다.\n");
+            Sleep(3000);
+            
         }
-      
-        printf("%s\n", diary->title);
-        printf("%s\n", diary->content);
-        printf("%s\n", diary->emotion);
-
-        fprintf(fp, "%s\n", diary->emotion);
-        fprintf(fp, "%s\n", diary->title);
-        fprintf(fp, "%s\n", diary->content);
-
-        fclose(fp);
-        printf("다이어리가 저장되었습니다.\n");
-
-
-    }
-    else if (answer == 'c' || answer == 'C') {
-     
-    }
-    else {
-        printf("잘못된 입력입니다. 다시 시도해주세요.\n");
-        scanf("%c", &answer);
+        else if (answer == 'c' || answer == 'C') {
+            valid = 1;
+            printf("\n\n   다이어리 작성을 취소합니다. 3초 뒤 이전 화면으로 돌아갑니다.");
+            Sleep(3000);
+        }
+        else {
+            printf("\n\n   잘못된 입력입니다. 다시 시도해주세요.\n");
+            printf("\n   S - 다이어리 저장\n   C - 취소\t\t\t\t입력 : ");
+            scanf(" %c", &answer);
+        }
     }
 }
-
 
 // 다이어리 파일의 존재 여부 확인
 bool diaryFileExists(char dFileName[], int year, int month, int day) {
@@ -89,11 +90,22 @@ bool diaryFileExists(char dFileName[], int year, int month, int day) {
     FILE* file = fopen(dFileName, "r");
     if (file != NULL) {
         fclose(file);
-        printf("해당 날짜에 일기가 존재합니다.");
+        printf("\n   ┏━━━━━━━━━━━━━━━━  << 일 기 >> ━━━━━━━━━━━━━━━━━┓\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┃        해당 날짜에 일기가 존재합니다.         ┃\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+
         return true;
     }
     else {
-        printf("해당 날짜에 일기가 존재하지 않습니다.");
+        printf("\n   ┏━━━━━━━━━━━━━━━━  << 일 기 >> ━━━━━━━━━━━━━━━━━┓\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┃     해당 날짜에 일기가 존재하지 않습니다.     ┃\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
         return false;
     }
 }
@@ -101,15 +113,15 @@ bool diaryFileExists(char dFileName[], int year, int month, int day) {
 // 다이어리 파일 구조체배열에 불러오기
 void diaryFileRead(char dFileName[], int year, int month, int day) {
     struct diary diary;
+    strcpy(diary.emotion, "");
     strcpy(diary.title, "");
     strcpy(diary.content, "");
-    strcpy(diary.emotion, "");
     char eFileName[100];
 
     FILE* fp = fopen(dFileName, "r");
 
     if (fp == NULL) {
-        printf("파일을 열 수 없습니다.\n");
+        printf("   파일을 열 수 없습니다.\n");
         return;
     }
 
@@ -119,89 +131,70 @@ void diaryFileRead(char dFileName[], int year, int month, int day) {
     int lineNumber = 0;
     char tmp[100];
 
-    printf("▣▣▣ %d년 %d월 %d일 Diary ▣▣▣\n", year, month, day);
+    printf("\n   ━━━━━━━━━━━━━━━━  << % d년 %d월 % d일 Diary >> ━━━━━━━━━━━━━━━━\n", year, month, day);
+    printf("\n");
 
     while (fgets(line, max, fp) != NULL) {
         if (lineNumber == 0) {
-            sscanf(line, "%[^\n]", diary.emotion);
-            printf("%s\n", diary.emotion);
-        }
-        else if (lineNumber == 1) {
             sscanf(line, "%[^\n]", diary.title);
-            printf("%s\n", diary.title);
+            printf("      ▶ 제목 : %s\n", diary.title);
+            printf("\n");
+
         }
         else if (lineNumber == 2) {
-            tmp[0] = '\0';
-            sscanf(line, "%[^\n]", tmp);
-            strcpy(diary.content, tmp);
-            strcat(diary.content, "\n");
+            sscanf(line, "%[^\n]", diary.emotion);
+            printf("      ▶ 오늘의 감정 : %s\n", diary.emotion);
+            printf("\n");
         }
-        else {
+        else if (lineNumber == 4) {
             tmp[0] = '\0';
             sscanf(line, "%[^\n]", tmp);
             strcat(diary.content, tmp);
             strcat(diary.content, "\n");
         }
+        else if (lineNumber > 4) {
+            tmp[0] = '\0';
+            sscanf(line, "%[^\n]", tmp);
+            strcat(diary.content, "\t");
+            strcat(diary.content, tmp);
+            strcat(diary.content, "\n");
+        }
         lineNumber++;
     }
-
+    printf("      ▶ 내용 : ");
     printf("%s\n", diary.content);
-
+    printf("   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
     fclose(fp);
 
-    printf("1. 다이어리 편집하기\n");
-    printf("2. 다이어리 삭제하기\n");
-    printf("3. To Do 리스트 편집창으로 이동\n");
+    printf("\n\n   # 수행할 기능을 선택하세요.\n\n");
+    printf("   1 - 일기 재작성\n");
+    printf("   2 - 일기 삭제\n\n");
+    printf("   0 - 이전 화면으로 이동\t\t입력 : ");
 
     int select;
-    scanf("%d",&select );
-     
+    scanf("%d", &select);
+
     while (1) {
         if (select == 1) {
-            diaryEdit(dFileName, &diary, year, month, day);
+            system("cls");
+            clear_stdin();
+            diaryWrite(year, month, day);
             break;
         }
         if (select == 2) {
             diaryDelete(dFileName, &diary, year, month, day);
             break;
         }
-        if (select == 3) {
+        if (select == 0) {
             break;
         }
         else {
-            printf("잘못 입력하셨습니다. 다시 입력해주세요. : ");
+            printf("\n\n   # 잘못 입력하셨습니다. 다시 선택하세요.\n\n");
+            printf("\t\t\t\t\t입력 : ");
             scanf("%d", &select);
         }
     }
-}
-
-// 다이어리 수정
-void diaryEdit(char dFileName[], struct diary* diary, int year, int month, int day) {
-    char eFileName[100];
-
-    printf("수정 할 내용을 입력하세요.\n");
-
-    printf("%4d-%02d-%02d\n", year, month, day);
-
-    clear_stdin();
-    printf("제목을 입력하세요.\n");
-    fgets(diary->title, sizeof(diary->title), stdin);
-
-    printf("내용을 입력하세요.\n");
-    fgets(diary->content, sizeof(diary->content), stdin);
-
-    printf("오늘의 감정을 입력하세요.\n");
-    fgets(diary->emotion, sizeof(diary->emotion), stdin);
-
-    system("cls");
-
-    printf("▣▣▣ %d년 %d월 %d일 Diary ▣▣▣\n", year, month, day);
-    printf("%s\n", diary->title);
-    printf("%s\n", diary->content);
-    printf("%s\n", diary->emotion);
-
-    diaryFileSave(diary, year, month, day);
 }
 
 // 다이어리 삭제
@@ -211,74 +204,12 @@ void diaryDelete(char dFileName[], struct diary* diary, int year, int month, int
     sprintf(eFileName, DIARYFILE_FORMAT, year, month, day);
 
     if (remove(eFileName) != 0) {
-        printf("파일 삭제에 실패했습니다.\n");
+        printf("\n\n   파일 삭제에 실패했습니다.\n");
         return;
     }
 
-    printf("파일을 성공적으로 삭제했습니다.\n");
-
-}
-
-// 비밀번호 설정
-void setPassword() {
-
-    FILE* file = fopen("password.txt", "r");
-    if (file == NULL) {
-        char password[5];
-
-        while (1) {
-            printf("설정 할 비밀번호 4자리를 입력해주세요: ");
-            scanf("%s", password);
-
-            if (strlen(password) != 4) {
-                printf("4자리로 다시 설정해 주세요.\n");
-                continue;
-            }
-
-            file = fopen("password.txt", "a");
-            if (file == NULL) {
-                printf("파일을 열 수 없습니다.\n");
-                return;
-            }
-
-            fprintf(file, "%s", password);
-            fclose(file);
-
-            printf("비밀번호가 설정되었습니다.\n");
-            break;
-        }
-    }
-    else {
-        fclose(file);
-    }
-}
-
-// 비밀번호 확인
-void checkPassword() {
-    char enteredPassword[5];
-    char savedPassword[5];
-    setPassword();
-
-    printf("비밀번호를 입력하세요: ");
-    scanf("%4s", enteredPassword);
-
-    FILE* file = fopen("password.txt", "r");
-    if (file == NULL) {
-        printf("파일을 열 수 없습니다.\n");
-        return;
-    }
-
-    fscanf(file, "%s", savedPassword);
-    fclose(file);
-
-    if (strcmp(enteredPassword, savedPassword) == 0) {
-        isPW = true;
-    }
-    else {
-        isPW = false;
-    }
-
-    system("cls");
+    printf("\n\n   일기 파일을 삭제합니다. 3초 뒤 이전 화면으로 돌아갑니다.\n");
+    Sleep(3000);
 }
 
 // 스트림 버퍼삭제

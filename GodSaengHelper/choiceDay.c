@@ -1,36 +1,42 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define TODOFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\todolist_%4d-%02d-%02d.txt"
-#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt"  
+#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 #include "functions.h"
 
-bool isPW;
-
 void printTodoList(struct todoList* todo) {
     system("cls");
     printf("\n");
-    printf("\t   <%4d년 %2d월 %2d일의 할일 리스트>", todo->tYear, todo->tMonth, todo->tDay);
-    printf("\n\n");
-
-    for (int i = 0; i < todo->tCount; i++) {
-        printf("\t%d) %-20s", i + 1, todo->todoDetail[i].content);
-        if (todo->todoDetail[i].complete == true)
-            printf("\t\t[\033[1;31mV\033[0m]\n");
-        else
-            printf("\t\t[ ]\n");
-    }
+    printf("\n   ┏━━━━━━  << % d년 % d월 % d일 To Do List >> ━━━━━━┓\n", todo->tYear, todo->tMonth, todo->tDay);
+    printf("   ┃                                                 ┃\n");
+    printf("   ┃                                                 ┃\n");
+    if (todo->tCount == 0)//수정
+        printf("   ┃\t        %-19s              ┃\n", "등록된 todo가 없습니다.");//
+    else {//
+        for (int i = 0; i < todo->tCount; i++) {
+            printf("   ┃\t %d) %-19s", i + 1, todo->todoDetail[i].content);
+            if (todo->todoDetail[i].complete == true)
+                printf("\t\t[\033[1;31mV\033[0m]          ┃\n");
+            else
+                printf("\t\t[ ]          ┃\n");
+        }
+    }//
+    printf("   ┃                                                 ┃\n");
+    printf("   ┃                                                 ┃\n");
+    printf("   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
     printf("\n");
     printf("\n");
 }
 
 void todoListWrite(char fileName[], struct todoList* todo) {
-    printf("할일을 입력해주세요\n");
+    
+    printf("\n\n   추가할 To Do 입력 : ");
     if (todo->tCount == 0) {
         FILE* todoFile = fopen(fileName, "w");
         if (todoFile == NULL) {
-            printf("파일 읽기에 실패했습니다.\n");
+            printf("   파일 읽기에 실패했습니다.\n");
             return -1;
         }
         fputc('0', todoFile);
@@ -42,12 +48,13 @@ void todoListWrite(char fileName[], struct todoList* todo) {
         fputc('\n', todoFile);
 
         todo->tCount++;
+        getchar();//
         fclose(todoFile);
     }
     else {
         FILE* todoFile = fopen(fileName, "a");
         if (todoFile == NULL) {
-            printf("파일 읽기에 실패했습니다.\n");
+            printf("   파일 읽기에 실패했습니다.\n");
             return -1;
         }
         fputc('0', todoFile);
@@ -59,9 +66,9 @@ void todoListWrite(char fileName[], struct todoList* todo) {
         fputc('\n', todoFile);
 
         todo->tCount++;
+        getchar();//
         fclose(todoFile);
     }
-
 }
 
 void todoSimpleRead(struct todoList* todo) {
@@ -71,7 +78,7 @@ void todoSimpleRead(struct todoList* todo) {
     if (todoFile == NULL) {
         todoFile = fopen(fileName, "w+");
         if (todoFile == NULL) {
-            printf("파일 생성에 실패했습니다.\n");
+            printf("   파일 생성에 실패했습니다.\n");
             return -1;
         }
     }
@@ -93,25 +100,25 @@ void todoSimpleRead(struct todoList* todo) {
 }
 
 void completeTodoList(char fileName[], struct todoList* todo) {
-    printf("완료 처리할 할일의 번호를 입력해주세요: ");
+    printf("\n\n   완료 처리할 항목의 번호를 입력해주세요 : ");
     int selectTodo;
     scanf("%d", &selectTodo);
     selectTodo--;
 
     if (selectTodo < 0 || selectTodo >= todo->tCount) {
-        printf("잘못된 입력입니다.\n");
+        printf("   잘못된 입력입니다.\n");
         return;
     }
 
     FILE* originalFile = fopen(fileName, "r");
     if (originalFile == NULL) {
-        printf("파일 열기에 실패했습니다.\n");
+        printf("   파일 열기에 실패했습니다.\n");
         return;
     }
 
     FILE* newFile = fopen("temp.txt", "w");
     if (newFile == NULL) {
-        printf("새 파일 생성에 실패했습니다.\n");
+        printf("   새 파일 생성에 실패했습니다.\n");
         fclose(originalFile);
     }
     rewind(originalFile);
@@ -130,37 +137,36 @@ void completeTodoList(char fileName[], struct todoList* todo) {
     fclose(originalFile);
     fclose(newFile);
 
-
     if (remove(fileName) != 0) {
-        printf("기존 파일 삭제에 실패했습니다.\n");
+        printf("   기존 파일 삭제에 실패했습니다.\n");
         return;
     }
     if (rename("temp.txt", fileName) != 0) {
-        printf("새 파일 이름 변경에 실패했습니다.\n");
+        printf("   새 파일 이름 변경에 실패했습니다.\n");
         return;
     }
 }
 
 void deleteTodoList(char fileName[], struct todoList* todo) {
-    printf("삭제할 할일의 번호를 입력해주세요: ");
+    printf("\n\n   삭제할 항목의 번호를 입력해주세요. : ");
     int selectTodo;
     scanf("%d", &selectTodo);
     selectTodo--;
 
     if (selectTodo < 0 || selectTodo >= todo->tCount) {
-        printf("유효하지 않은 할일 번호입니다.\n");
+        printf("   유효하지 않은 번호입니다.\n");
         return;
     }
 
     FILE* originalFile = fopen(fileName, "r");
     if (originalFile == NULL) {
-        printf("파일 열기에 실패했습니다.\n");
+        printf("   파일 열기에 실패했습니다.\n");
         return;
     }
 
     FILE* newFile = fopen("temp.txt", "w");
     if (newFile == NULL) {
-        printf("새 파일 생성에 실패했습니다.\n");
+        printf("   새 파일 생성에 실패했습니다.\n");
         fclose(originalFile);
         return;
     }
@@ -183,11 +189,11 @@ void deleteTodoList(char fileName[], struct todoList* todo) {
 
 
     if (remove(fileName) != 0) {
-        printf("기존 파일 삭제에 실패했습니다.\n");
+        printf("   기존 파일 삭제에 실패했습니다.\n");
         return;
     }
     if (rename("temp.txt", fileName) != 0) {
-        printf("새 파일 이름 변경에 실패했습니다.\n");
+        printf("   새 파일 이름 변경에 실패했습니다.\n");
         return;
     }
 }
@@ -203,37 +209,57 @@ void todoListDetailRead(struct todoList* todo) {
         todoSimpleRead(todo);
         printTodoList(todo);
 
-        printf("\t수행할 작업을 선택해주세요.\n");
-        printf("\t0) 이전화면으로 돌아가기\n");
-        printf("\t1) 할일 추가\n");
-        printf("\t2) 할일 삭제\n");
-        printf("\t3) 할일 완료\n");
+        printf("\n   ─────────────────────────────────────────────────────────\n\n");
+        printf("\n    # 수행할 작업을 선택해주세요.\n\n");
+        printf("    1 - 할 일 추가\n");
+        printf("    2 - 할 일 삭제\n");
+        printf("    3 - 할 일 완료\n");
+        printf("\n    0 - 이전 화면으로 돌아가기\t\t\t입력 : ");
 
-        scanf("%d", &command);
-        if (command == 0) {
+        command = getchar();//
+
+        if (command == '0') {//
             break;
         }
-        else if (command == 1) {
+        else if (command == '1') {//
             todoListWrite(fileName, &todo);
+            printf("\n\n   해당 할 일을 추가합니다...");//
+            Sleep(2000);//
         }
-        else if (command == 2) {
-            deleteTodoList(fileName, &todo);
+        else if (command == '2') {//
+            if (todo->tCount == 0) {//수정
+                printf("\n\n    ※삭제할 todo가 없습니다.");//
+                Sleep(2000);//
+            }//
+            else {//
+                deleteTodoList(fileName, &todo);
+                printf("\n\n   해당 할 일을 삭제합니다...");//
+                Sleep(2000);//
+                getchar();
+            }//
         }
-        else if (command == 3) {
-            completeTodoList(fileName, &todo);
+        else if (command == '3') {//
+            if (todo->tCount == 0) {//
+                printf("\n\n    ※완료할 todo가 없습니다.");//
+                Sleep(2000);//
+            }//
+            else {//
+                completeTodoList(fileName, &todo);
+                printf("\n\n   해당 할 일을 완료 처리합니다...");//
+                Sleep(2000);//
+                getchar();
+            }//
+
         }
-        else
-            printf("잘못된 입력입니다.\n");
+        else {
+            printf("\n\n    ※잘못된 입력입니다. 다시 입력해주세요.");//
+            Sleep(2000);//
+        }
     }
 }
 
 void choiceDay(int year, int month, int day, struct diary* diary, struct diarydate* date) {
     system("cls");
-
-    //strcpy(diary->title, "");
-    //strcpy(diary->content, "");
-    //strcpy(diary->emotion, "");
-
     struct todoList todo;
 
     todo.tYear = year;
@@ -243,15 +269,29 @@ void choiceDay(int year, int month, int day, struct diary* diary, struct diaryda
     todo.tCount = 0;
 
     while (1) { // to do 화면 띄우기
-        printf("\n\t▣▣▣ %d년 %d월 %d일 To Do List ▣▣▣\n\n", year, month, day);
+        printf("\n\t         ◈  %d년 %d월 %d일 ◈\n\n", year, month, day);
+        printf("\n   ┏━━━━━━━━━━━━━━  << 남은 할 일 >> ━━━━━━━━━━━━━━┓\n");
+        printf("   ┃                                               ┃\n");
+        printf("   ┃                                               ┃\n");
+
 
         todoSimpleRead(&todo);
+        if (todo.tCount == 0)//수정
+            printf("   ┃              %-33s┃\n", "남은 할 일이 없습니다.");//
+        else {//
+            bool isEmpty = true;
+            for (int i = 0; i < todo.tCount; i++) {
+                if (todo.todoDetail[i].complete == false) {
+                    printf("   ┃    - %-41s┃\n", todo.todoDetail[i].content);
+                    isEmpty = false;
+                }
+            }
+            if (isEmpty == true)
+                printf("   ┃              %-33s┃\n", "남은 할 일이 없습니다.");//
+        }//
 
-        for (int i = 0; i < todo.tCount; i++) {
-            if (todo.todoDetail[i].complete == false)
-                printf("%s\n", todo.todoDetail[i].content);
-        }
-
+        printf("   ┃                                               ┃\n");
+        printf("   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
         printf("\n\n");
 
         char dFileName[50];
@@ -260,51 +300,46 @@ void choiceDay(int year, int month, int day, struct diary* diary, struct diaryda
         bool isDiary = false;
         isDiary = diaryFileExists(dFileName, year, month, day);
 
-        printf("\n\n\n\n   1 - To Do List 편집\n   2 - 일기 편집\n");
+        printf("\n\n   ─────────────────────────────────────────────────\n\n");
+        printf("     # 수행할 작업을 선택하세요.\n\n");
+        printf("     1 - 할 일 편집\n     2 - 일기 편집\n     3 - 비밀번호 관리\n\n     0 - 달력으로 돌아가기\t\t 입력 : ");
+
         int select = 0;
         scanf("%d", &select);
-        getchar();
         system("cls");
 
         if (select == 1) {
+            getchar();
             todoListDetailRead(&todo);
         }
         else if (select == 2) {
-            system("cls");
-
+            getchar();
             if (isDiary == false) {
+                printf("\n\t   작성된 일기가 없어 새 일기를 작성합니다.\n\n");
                 diaryWrite(year, month, day);
             }
             else {
-                while (1) {
-                    checkPassword();
-                    if (isPW == true) {
-                        //printf("%s", dFileName);
-                        //printf("%s", diary->title);
-                        //printf("%s", diary->content);
-                        //printf("%s", diary->emotion);
-                        //printf("%d", year);
-                        //int n;
-                        //scanf("%d", &n);
-                        diaryFileRead(dFileName, year, month, day);
-                        break;
-                    }
-                    else {
-                        printf("비밀번호가 일치하지 않습니다. 다시 입력하세요.\n");
-                        printf("0 - 달력으로 돌아가기\n");
-                        int tmp;
-                        scanf("%d", &tmp);
-                        if (tmp == 0)
-                            break;
-
-                    }
+                FILE* file = fopen("password.txt", "r");
+                if (file != NULL) {
+                    inputPassword(dFileName, year, month, day);
+                    fclose(file);
+                }
+                else {
+                    diaryFileRead(dFileName, year, month, day);
                 }
             }
         }
+        else if (select == 3) {
+            passwordManagement();
+        }
+        else if (select == 0) {
+            break;
+        }
         else {
-            printf("잘못 입력하셨습니다. 다시 입력해주세요. : ");
+            printf("   잘못 입력하셨습니다. 다시 입력해주세요. : ");
             scanf("%d", &select);
         }
         system("cls");
     }
 }
+

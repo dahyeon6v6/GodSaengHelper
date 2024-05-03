@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Project\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\choiceDay.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\choiceDay.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\choiceDay.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\diary.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\diary.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\diary.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\lastDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\lastDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\showCalender.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\showCalender.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\startDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\startDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\startDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\a_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\password.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\password.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\lastDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\lastDayOfMonth.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\a_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\a_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\showCalender.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\showCalender.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57B769E9-4B6C-496E-897C-61B08F29DED0}|GodSaengHelper\\GodSaengHelper.vcxproj|solutionrelative:GodSaengHelper\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +42,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "diary.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\diary.c",
-              "RelativeDocumentMoniker": "GodSaengHelper\\diary.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\diary.c",
-              "RelativeToolTip": "GodSaengHelper\\diary.c",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAswGEAAAAFAAAA",
+              "DocumentIndex": 6,
+              "Title": "a_main.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\a_main.c",
+              "RelativeDocumentMoniker": "GodSaengHelper\\a_main.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\a_main.c",
+              "RelativeToolTip": "GodSaengHelper\\a_main.c",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-04-25T07:23:13.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T07:37:01.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "functions.h",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\functions.h",
+              "RelativeDocumentMoniker": "GodSaengHelper\\functions.h",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\functions.h",
+              "RelativeToolTip": "GodSaengHelper\\functions.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-26T01:25:12.641Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "choiceDay.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\choiceDay.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\choiceDay.c",
               "RelativeDocumentMoniker": "GodSaengHelper\\choiceDay.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\choiceDay.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\choiceDay.c",
               "RelativeToolTip": "GodSaengHelper\\choiceDay.c",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAAAKAAAAArAAAA",
+              "ViewState": "AQIAAP0AAAAAAAAAAAAowAMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-04-26T01:23:16.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "a_main.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\a_main.c",
-              "RelativeDocumentMoniker": "GodSaengHelper\\a_main.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\a_main.c",
-              "RelativeToolTip": "GodSaengHelper\\a_main.c",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAWAAAA",
+              "DocumentIndex": 1,
+              "Title": "diary.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\diary.c",
+              "RelativeDocumentMoniker": "GodSaengHelper\\diary.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\diary.c",
+              "RelativeToolTip": "GodSaengHelper\\diary.c",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAAJgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-04-17T07:37:01.191Z"
+              "WhenOpened": "2024-04-25T07:23:13.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "functions.h",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\functions.h",
-              "RelativeDocumentMoniker": "GodSaengHelper\\functions.h",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\functions.h",
-              "RelativeToolTip": "GodSaengHelper\\functions.h",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-26T01:25:12.641Z"
+              "DocumentIndex": 4,
+              "Title": "password.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\password.c",
+              "RelativeDocumentMoniker": "GodSaengHelper\\password.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\password.c",
+              "RelativeToolTip": "GodSaengHelper\\password.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-04-30T00:33:52.615Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "showCalender.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\showCalender.c",
+              "RelativeDocumentMoniker": "GodSaengHelper\\showCalender.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\showCalender.c",
+              "RelativeToolTip": "GodSaengHelper\\showCalender.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-04-24T00:24:59.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "lastDayOfMonth.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\lastDayOfMonth.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\lastDayOfMonth.c",
               "RelativeDocumentMoniker": "GodSaengHelper\\lastDayOfMonth.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\lastDayOfMonth.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\lastDayOfMonth.c",
               "RelativeToolTip": "GodSaengHelper\\lastDayOfMonth.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-04-24T00:24:46.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "startDayOfMonth.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\startDayOfMonth.c",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\startDayOfMonth.c",
               "RelativeDocumentMoniker": "GodSaengHelper\\startDayOfMonth.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\startDayOfMonth.c",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\uAC13\uC0DD\uD5EC\uD37C \uCD5C\uC885\\GodSaengHelper\\GodSaengHelper\\startDayOfMonth.c",
               "RelativeToolTip": "GodSaengHelper\\startDayOfMonth.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-04-24T00:25:11.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "showCalender.c",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\showCalender.c",
-              "RelativeDocumentMoniker": "GodSaengHelper\\showCalender.c",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\GodSaengHelper\\showCalender.c",
-              "RelativeToolTip": "GodSaengHelper\\showCalender.c",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-04-24T00:24:59.721Z"
             }
           ]
         }
