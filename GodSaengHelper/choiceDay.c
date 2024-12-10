@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define TODOFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\todolist_%4d-%02d-%02d.txt"
-#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
+#define TODOFILE_FORMAT "C:\\Users\\a\\Documents\\Test\\todolist_%4d-%02d-%02d.txt"
+#define DIARYFILE_FORMAT "C:\\Users\\a\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>

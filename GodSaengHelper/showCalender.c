@@ -1,5 +1,5 @@
-#define TODOFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\todolist_%4d-%02d-%02d.txt"
-#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt"  
+#define TODOFILE_FORMAT "C:\\Users\\a\\Documents\\Test\\todolist_%4d-%02d-%02d.txt"
+#define DIARYFILE_FORMAT "C:\\Users\\a\\Documents\\Test\\diary_%4d-%02d-%02d.txt"  
 #include <stdbool.h>
 #include <stdio.h>
 

@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define DIARYFILE_FORMAT "C:\\Users\\User\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
+#define DIARYFILE_FORMAT "C:\\Users\\a\\Documents\\Test\\diary_%4d-%02d-%02d.txt" 
 
 #include <stdio.h>
 #include <stdlib.h>
